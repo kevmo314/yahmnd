@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>YOU'RE A HOODLE MAN NOW, DAN</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      default="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <style type="text/css">
+      html,
+      body,
+      #frame {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #frame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #text {
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 72pt;
+      }
+      #dan {
+        width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="frame">
+      <img src="/dan.png" id="dan" />
+      <div id="text"></div>
+      <audio id="audio">
+        <source src="/dan.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+    <script type="text/javascript">
+      (function () {
+        document.getElementById("dan").onclick = function () {
+          document.getElementById("audio").play();
+          setTimeout(function () {
+            document.getElementById("text").innerText = "YOU'RE";
+          }, 273);
+          setTimeout(function () {
+            document.getElementById("text").innerText = "A";
+          }, 438);
+          setTimeout(function () {
+            document.getElementById("text").innerText = "HOODLE";
+          }, 522);
+          setTimeout(function () {
+            document.getElementById("text").innerText = "MAN";
+          }, 926);
+          setTimeout(function () {
+            document.getElementById("text").innerText = "NOW";
+          }, 1199);
+          setTimeout(function () {
+            document.getElementById("text").innerText = "DAN";
+          }, 1672);
+          setTimeout(function () {
+            document.getElementById("text").innerText = "";
+          }, 2350);
+        };
+      })();
+    </script>
+  </body>
+</html>
